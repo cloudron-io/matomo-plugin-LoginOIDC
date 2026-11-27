@@ -63,7 +63,7 @@ class Controller extends \Piwik\Plugin\Controller
      * @param Auth                $auth
      * @param SessionInitializer  $sessionInitializer
      */
-    public function __construct(Auth $auth = null, SessionInitializer $sessionInitializer = null)
+    public function __construct(?Auth $auth = null, ?SessionInitializer $sessionInitializer = null)
     {
         parent::__construct();
 
@@ -332,7 +332,7 @@ class Controller extends \Piwik\Plugin\Controller
      * @param  string  $matomoUserLogin Override the local user if non-null
      * @return void
      */
-    private function linkAccount(string $providerUserId, string $matomoUserLogin = null)
+    private function linkAccount(string $providerUserId, ?string $matomoUserLogin = null)
     {
         if ($matomoUserLogin === null) {
             $matomoUserLogin = Piwik::getCurrentUserLogin();
@@ -365,7 +365,7 @@ class Controller extends \Piwik\Plugin\Controller
      * @param  string          $providerEmail    Users email address
      * @return void
      */
-    private function signupUser($settings, string $providerUserId, string $providerEmail = null)
+    private function signupUser($settings, string $providerUserId, ?string $providerEmail = null)
     {
         // only sign up user if setting is enabled
         if ($settings->allowSignup->getValue()) {

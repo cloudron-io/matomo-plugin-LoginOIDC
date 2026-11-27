@@ -1,6 +1,6 @@
 {
     "name": "LoginOIDC",
-    "version": "5.0.0",
+    "version": "6.0.0",
     "description": "Adds support for integrating external authentication services",
     "keywords": ["authentication", "login", "oauth", "openid", "connect", "sso"],
     "license": "GPL v3+",
@@ -13,8 +13,8 @@
         }
     ],
     "require": {
-        "piwik": ">=5.0.0-b1,<6.0.0-b1",
-        "php": ">=7.0.0"
+        "matomo": ">=6.0.0-b1,<7.0.0-b1",
+        "php": ">=8.1.0"
     },
     "donate": {
         "paypal": "matomo-loginoidc@dthiemermann.org"

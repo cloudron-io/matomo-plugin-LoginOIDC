@@ -110,7 +110,7 @@ class LoginOIDC extends \Piwik\Plugin
      * @param  string|null  $payload
      * @return void
      */
-    public function renderLoginOIDCMod(string &$out, string $payload = null)
+    public function renderLoginOIDCMod(string &$out, ?string $payload = null)
     {
         if (!empty($payload) && $payload === "bottom") {
             $content = FrontController::getInstance()->dispatch("LoginOIDC", "loginMod");
@@ -129,7 +129,7 @@ class LoginOIDC extends \Piwik\Plugin
      * @param  string|null  $payload
      * @return void
      */
-    public function renderConfirmPasswordMod(string &$out, string $payload = null)
+    public function renderConfirmPasswordMod(string &$out, ?string $payload = null)
     {
         if (!empty($payload) && $payload === "bottom") {
             $content = FrontController::getInstance()->dispatch("LoginOIDC", "confirmPasswordMod");

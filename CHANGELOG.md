@@ -1,5 +1,8 @@
 ## Changelog
 
+
+### 6.0.0
+* Compatibility with Matomo 6. Requires PHP 8.1.
 ### 4.1.2
 * Fix disabling OIDC for superusers not having any effect (#68).
 
